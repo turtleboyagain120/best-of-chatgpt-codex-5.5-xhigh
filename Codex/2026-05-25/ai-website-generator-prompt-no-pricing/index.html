@@ -1,0 +1,423 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Codex XHigh Studio is a futuristic developer hub for experimental AI systems, website generators, agents, and GitHub projects."
+    />
+    <title>Codex XHigh Studio</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="site-shell">
+      <div class="ambient-scene" aria-hidden="true">
+        <div class="mesh-panel mesh-panel-a"></div>
+        <div class="mesh-panel mesh-panel-b"></div>
+        <div class="mesh-panel mesh-panel-c"></div>
+        <div class="code-flow flow-left">
+          <span>const idea = "AI system";</span>
+          <span>memory.write(context);</span>
+          <span>agent.plan(nextStep);</span>
+          <span>export React + HTML;</span>
+        </div>
+        <div class="code-flow flow-right">
+          <span>generate.website(prompt);</span>
+          <span>chat.connect(database);</span>
+          <span>dream.simulate(signal);</span>
+          <span>deploy.prototype();</span>
+        </div>
+      </div>
+
+      <header class="navbar">
+        <a class="brand" href="#top" aria-label="Codex XHigh Studio home">
+          <span class="brand-mark">CX</span>
+          <span>Codex XHigh Studio</span>
+        </a>
+
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav class="nav-links" id="site-nav" aria-label="Primary navigation">
+          <a href="#demo">Demo</a>
+          <a href="#features">Features</a>
+          <a href="#systems">Systems</a>
+          <a href="#projects">Projects</a>
+          <a href="#creator">Creator</a>
+          <a class="nav-github" href="https://github.com/turtleboyagain120" target="_blank" rel="noreferrer">
+            GitHub Hub
+          </a>
+        </nav>
+      </header>
+
+      <main id="top">
+        <section class="hero section">
+          <div class="hero-copy">
+            <p class="eyebrow">Experimental AI Systems Hub</p>
+            <h1>Build AI Systems, Websites, and Experimental Apps From Ideas</h1>
+            <p class="hero-subtitle">A showcase of modern AI tools and developer experiments</p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#projects">Explore Projects</a>
+              <a
+                class="button button-secondary"
+                href="https://github.com/turtleboyagain120"
+                target="_blank"
+                rel="noreferrer"
+              >
+                View GitHub
+              </a>
+            </div>
+            <div class="hero-metrics" aria-label="Studio highlights">
+              <span><strong>04</strong> highlighted repos</span>
+              <span><strong>03</strong> demo modes</span>
+              <span><strong>00</strong> checkout funnels</span>
+            </div>
+          </div>
+
+          <div class="studio-visual" aria-label="Codex XHigh Studio interface preview">
+            <div class="visual-toolbar">
+              <span></span>
+              <span></span>
+              <span></span>
+              <strong>XHigh Studio Preview</strong>
+            </div>
+            <div class="visual-grid">
+              <div class="visual-node node-main">
+                <small>Prompt</small>
+                <strong>Idea to AI build</strong>
+              </div>
+              <div class="visual-node">
+                <small>Memory</small>
+                <strong>Context map</strong>
+              </div>
+              <div class="visual-node">
+                <small>Agent</small>
+                <strong>Plan engine</strong>
+              </div>
+              <div class="visual-node">
+                <small>Export</small>
+                <strong>React mock</strong>
+              </div>
+            </div>
+            <div class="visual-status">
+              <span class="pulse-dot"></span>
+              <span>Prototype stream active</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="signal-strip" aria-label="Studio capabilities">
+          <div class="signal-item">
+            <span>Prompt to product map</span>
+            <strong>Idea routing</strong>
+          </div>
+          <div class="signal-item">
+            <span>Memory experiments</span>
+            <strong>Context loops</strong>
+          </div>
+          <div class="signal-item">
+            <span>Prototype output</span>
+            <strong>HTML / React mock</strong>
+          </div>
+          <div class="signal-item">
+            <span>Portfolio hub</span>
+            <strong>GitHub first</strong>
+          </div>
+        </section>
+
+        <section class="demo section" id="demo">
+          <div class="section-heading">
+            <p class="eyebrow">Live Demo Builder</p>
+            <h2>Describe an idea and watch the studio shape a prototype.</h2>
+          </div>
+
+          <div class="demo-layout">
+            <div class="builder-panel glass-panel">
+              <label for="idea-input">Describe a website, AI tool, or system</label>
+              <textarea id="idea-input" rows="6" placeholder="Describe a website, AI tool, or system..."></textarea>
+
+              <div class="prompt-chip-row" aria-label="Example prompts">
+                <button type="button" data-prompt="A neon AI portfolio that shows projects, memory systems, and agent demos">
+                  AI portfolio
+                </button>
+                <button type="button" data-prompt="A chat system with database memory and a reflective learning dashboard">
+                  Memory chat
+                </button>
+                <button type="button" data-prompt="An experimental dream simulator with agent states and exportable UI">
+                  Dream agent
+                </button>
+              </div>
+
+              <div class="mode-group" role="tablist" aria-label="Builder modes">
+                <button class="mode-button active" type="button" data-mode="website" role="tab" aria-selected="true">
+                  Website Generator
+                </button>
+                <button class="mode-button" type="button" data-mode="chat" role="tab" aria-selected="false">
+                  AI Chat System
+                </button>
+                <button class="mode-button" type="button" data-mode="agent" role="tab" aria-selected="false">
+                  Experimental AI Agent
+                </button>
+              </div>
+
+              <button class="button button-primary builder-action" type="button" id="simulate-button">
+                Generate Preview
+              </button>
+
+              <div class="builder-timeline" aria-label="Builder progress">
+                <span class="active">Prompt</span>
+                <span>Map</span>
+                <span>Preview</span>
+                <span>Export</span>
+              </div>
+            </div>
+
+            <div class="preview-panel glass-panel" aria-live="polite">
+              <div class="preview-header">
+                <div>
+                  <p class="eyebrow">Output Preview</p>
+                  <h3 id="preview-title">Neon Website System</h3>
+                </div>
+                <span id="preview-badge">Website</span>
+              </div>
+
+              <div class="mock-browser">
+                <div class="mock-topbar">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+                <div class="mock-content" id="mock-content">
+                  <div class="mock-hero-line"></div>
+                  <div class="mock-copy-line"></div>
+                  <div class="mock-card-row">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="export-row">
+                <span>HTML mock</span>
+                <span>React mock</span>
+                <span>System plan</span>
+              </div>
+
+              <div class="preview-console" aria-label="Preview console">
+                <span>studio.compile(prompt)</span>
+                <span>memory.trace(project_context)</span>
+                <span>github.link(author_hub)</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="features section" id="features">
+          <div class="section-heading">
+            <p class="eyebrow">Feature Showcase</p>
+            <h2>Tools for creative AI prototypes, memory concepts, and code-ready demos.</h2>
+          </div>
+
+          <div class="feature-grid">
+            <article class="feature-card glass-panel">
+              <span class="feature-index">01</span>
+              <h3>AI Website Generation Engine</h3>
+              <p>Transforms loose ideas into structured sections, interface states, and polished landing page layouts.</p>
+            </article>
+            <article class="feature-card glass-panel">
+              <span class="feature-index">02</span>
+              <h3>AI Chat System Builder</h3>
+              <p>Mocks chat flows with database-backed memory concepts, retrieval paths, and conversational state.</p>
+            </article>
+            <article class="feature-card glass-panel">
+              <span class="feature-index">03</span>
+              <h3>Memory-based AI Concepts</h3>
+              <p>Explores persistent context, reflective loops, and learning structures for experimental assistants.</p>
+            </article>
+            <article class="feature-card glass-panel">
+              <span class="feature-index">04</span>
+              <h3>Experimental AI Architectures</h3>
+              <p>Visualizes agents, dream simulations, planning modules, and unusual prototype systems.</p>
+            </article>
+            <article class="feature-card glass-panel feature-wide">
+              <span class="feature-index">05</span>
+              <h3>Code Export Simulation</h3>
+              <p>Shows how a build could become HTML, React components, and implementation notes without turning into a checkout funnel.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="systems section" id="systems">
+          <div class="section-heading">
+            <p class="eyebrow">System Lab</p>
+            <h2>A fuller platform view for AI sites, chat systems, memory loops, and odd prototype ideas.</h2>
+          </div>
+
+          <div class="systems-layout">
+            <article class="system-map glass-panel">
+              <div class="system-core">Codex XHigh Studio</div>
+              <div class="system-ring ring-one"></div>
+              <div class="system-ring ring-two"></div>
+              <span class="system-node node-a">Prompt</span>
+              <span class="system-node node-b">Memory</span>
+              <span class="system-node node-c">Agent</span>
+              <span class="system-node node-d">Export</span>
+            </article>
+
+            <div class="workflow-list">
+              <article class="workflow-card glass-panel">
+                <span>01</span>
+                <h3>Idea Intake</h3>
+                <p>Turn a rough project thought into a structured build brief with sections, goals, and interface states.</p>
+              </article>
+              <article class="workflow-card glass-panel">
+                <span>02</span>
+                <h3>AI Architecture Sketch</h3>
+                <p>Shape memory concepts, chat paths, agent decisions, and experimental logic before writing code.</p>
+              </article>
+              <article class="workflow-card glass-panel">
+                <span>03</span>
+                <h3>Developer Showcase Output</h3>
+                <p>Present the work as a GitHub-first portfolio hub with demos, summaries, and clean repo links.</p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="projects section" id="projects">
+          <div class="section-heading">
+            <p class="eyebrow">GitHub Project Showcase</p>
+            <h2>Full-card GitHub portals for the creator's experimental AI work.</h2>
+          </div>
+
+          <div class="project-grid">
+            <a
+              class="project-card glass-panel"
+              href="https://github.com/turtleboyagain120/AI_CHAT_AND_DATABASE"
+              data-href="https://github.com/turtleboyagain120/AI_CHAT_AND_DATABASE"
+              aria-label="Open AI_CHAT_AND_DATABASE on GitHub"
+            >
+              <div class="project-visual memory-visual" aria-hidden="true">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <span class="project-kicker">AI Memory</span>
+              <h3>AI_CHAT_AND_DATABASE</h3>
+              <p>AI chat and database experiments focused on memory, stored context, and conversational prototypes.</p>
+              <div class="tag-row">
+                <span>Chat</span>
+                <span>Database</span>
+                <span>Memory</span>
+              </div>
+              <span class="project-link">Open repository</span>
+            </a>
+
+            <a
+              class="project-card glass-panel"
+              href="https://github.com/turtleboyagain120/learn-self-awarness-101"
+              data-href="https://github.com/turtleboyagain120/learn-self-awarness-101"
+              aria-label="Open learn-self-awarness-101 on GitHub"
+            >
+              <div class="project-visual reflection-visual" aria-hidden="true">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <span class="project-kicker">Reflection</span>
+              <h3>learn-self-awarness-101</h3>
+              <p>Self-reflection and learning concepts for AI systems that observe behavior and adapt over time.</p>
+              <div class="tag-row">
+                <span>Learning</span>
+                <span>Reflection</span>
+                <span>AI concepts</span>
+              </div>
+              <span class="project-link">Open repository</span>
+            </a>
+
+            <a
+              class="project-card glass-panel"
+              href="https://github.com/turtleboyagain120/Things-people-never-asked-for"
+              data-href="https://github.com/turtleboyagain120/Things-people-never-asked-for"
+              aria-label="Open Things-people-never-asked-for on GitHub"
+            >
+              <div class="project-visual creative-visual" aria-hidden="true">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <span class="project-kicker">Creative Lab</span>
+              <h3>Things-people-never-asked-for</h3>
+              <p>Experimental creative AI projects and unusual builds that test playful, unexpected product ideas.</p>
+              <div class="tag-row">
+                <span>Creative</span>
+                <span>Prototype</span>
+                <span>Odd ideas</span>
+              </div>
+              <span class="project-link">Open repository</span>
+            </a>
+
+            <a
+              class="project-card glass-panel"
+              href="https://github.com/turtleboyagain120/WeMon_dreamV1-I-BSL-1.0"
+              data-href="https://github.com/turtleboyagain120/WeMon_dreamV1-I-BSL-1.0"
+              aria-label="Open WeMon_dreamV1-I-BSL-1.0 on GitHub"
+            >
+              <div class="project-visual dream-visual" aria-hidden="true">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <span class="project-kicker">Dream Prototype</span>
+              <h3>WeMon_dreamV1-I-BSL-1.0</h3>
+              <p>Dream simulation and AI prototype system work exploring generated mental scenes and state loops.</p>
+              <div class="tag-row">
+                <span>Dream sim</span>
+                <span>Agent state</span>
+                <span>Prototype</span>
+              </div>
+              <span class="project-link">Open repository</span>
+            </a>
+          </div>
+        </section>
+
+        <section class="creator section" id="creator">
+          <div class="creator-panel glass-panel">
+            <div>
+              <p class="eyebrow">About the Creator</p>
+              <h2>Built by the creator of experimental AI systems and developer projects.</h2>
+              <p>
+                Codex XHigh Studio acts as a central hub for experimental tools, AI concepts, prototype apps, and
+                developer work from the author.
+              </p>
+            </div>
+            <a class="button button-secondary" href="https://github.com/turtleboyagain120" target="_blank" rel="noreferrer">
+              Visit GitHub Profile
+            </a>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div>
+          <strong>Codex XHigh Studio — Experimental AI Systems</strong>
+          <p>Built by the creator of experimental AI systems and developer projects.</p>
+        </div>
+        <nav aria-label="Footer navigation">
+          <a href="#demo">Demo</a>
+          <a href="#systems">Systems</a>
+          <a href="#projects">Projects</a>
+          <a href="#creator">Creator</a>
+          <a href="https://github.com/turtleboyagain120" target="_blank" rel="noreferrer">GitHub Author</a>
+        </nav>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

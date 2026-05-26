@@ -1,0 +1,9 @@
+{
+  "name": "carlos-simulation-wars-3d",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A Three.js 3D game demo for Carlos: Simulation Wars.",
+  "scripts": {
+    "start": "node server.js"
+  }
+}

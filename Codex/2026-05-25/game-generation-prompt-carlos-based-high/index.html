@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Carlos: Simulation Wars</title>
+    <link rel="stylesheet" href="src/styles.css">
+  </head>
+  <body>
+    <canvas id="game" aria-label="Carlos: Simulation Wars game canvas"></canvas>
+
+    <div class="scanlines" aria-hidden="true"></div>
+    <div class="vignette" aria-hidden="true"></div>
+
+    <main class="shell" aria-live="polite">
+      <section id="titleScreen" class="title-screen">
+        <div class="title-copy">
+          <p class="eyebrow">Carlos: Simulation Wars</p>
+          <h1>Reality Has a Physics Problem</h1>
+          <p class="story">
+            A Spanish scientist, a defyn 2x000 ring, a forbidden notepad, and
+            a red core named Rickr are folding the simulation in half.
+          </p>
+          <button id="startButton" type="button">Enter the Collapse</button>
+        </div>
+      </section>
+
+      <section id="hud" class="hud" hidden>
+        <div class="hud-top">
+          <div>
+            <p id="zoneName" class="zone-name">Stable Simulation Zone</p>
+            <p id="objective" class="objective">Locate the first physics node.</p>
+          </div>
+          <div id="systemState" class="system-state">STABLE</div>
+        </div>
+
+        <div class="meter-stack">
+          <div class="meter">
+            <span>Integrity</span>
+            <div class="meter-track"><i id="healthBar"></i></div>
+          </div>
+          <div class="meter">
+            <span>Ring Charge</span>
+            <div class="meter-track"><i id="energyBar"></i></div>
+          </div>
+          <div class="meter">
+            <span>Glitch Form</span>
+            <div class="meter-track"><i id="glitchBar"></i></div>
+          </div>
+        </div>
+
+        <div id="prompt" class="prompt"></div>
+        <div id="toast" class="toast"></div>
+      </section>
+
+      <section id="ending" class="ending" hidden>
+        <div class="ending-copy">
+          <p class="eyebrow">Simulation report</p>
+          <h2>The Notepad Split in Two</h2>
+          <p>
+            Carlos destabilized Rickr, folded the Core System Layer, and escaped
+            with the equation still humming inside the defyn 2x000 ring.
+          </p>
+          <button id="restartButton" type="button">Run It Again</button>
+        </div>
+      </section>
+    </main>
+
+    <script src="src/game.js" defer></script>
+  </body>
+</html>

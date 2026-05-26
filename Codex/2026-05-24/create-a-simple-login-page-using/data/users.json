@@ -1,0 +1,31 @@
+{
+  "users": [
+    {
+      "id": "user_admin",
+      "username": "admin",
+      "displayName": "Admin User",
+      "role": "admin",
+      "passwordHash": "scrypt$4d875d9779f3aa064ef7d08ce5d9c067$b747118850d2d883eb7bd38d8eb7212036e5ce04b536161d0e00635cc23bb4e99fcec5abe7998bbc833f004b5f2a7e3eca72562cddd7b8ae4db39d85a03888f9",
+      "createdAt": "2026-05-24T16:44:17.664Z",
+      "passwordUpdatedAt": "2026-05-24T16:44:17.664Z"
+    },
+    {
+      "id": "user_30a1dc44-341e-4b15-af2d-49aa2ab9d5ec",
+      "username": "user_tfk1rm",
+      "displayName": "Test Pilot",
+      "role": "member",
+      "passwordHash": "scrypt$8ee076e28c59be871cfebde55c741a12$7bbda2b5611234d9db8d1c27ccab3be1a0654738e7f1c9b42451a62bcd334866b7224b8c85b85db191961c65c77e19071e2895c774b638206dd90169d9382bed",
+      "createdAt": "2026-05-24T18:52:34.878Z",
+      "passwordUpdatedAt": "2026-05-24T18:52:34.878Z"
+    },
+    {
+      "id": "user_342d3dbf-6d7f-4713-8d9b-9b5201217dbc",
+      "username": "avery",
+      "displayName": "dino",
+      "role": "member",
+      "passwordHash": "scrypt$6f4eb91dca3fdfc07d254d86e71a91fe$4e7f761d01503c029ec9adb8095b788569dff025ef111acffe6841dab66dce678e0bd7b712da08e55ebd71e1fc87cb162159c7feec5181b275fdf50a121de944",
+      "createdAt": "2026-05-24T18:58:52.576Z",
+      "passwordUpdatedAt": "2026-05-24T18:58:52.576Z"
+    }
+  ]
+}

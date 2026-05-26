@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="csrf-token" content="{{CSRF_TOKEN}}" />
+  <title>Signal Garden</title>
+  <link rel="stylesheet" href="/assets/styles.css" />
+  <script src="/assets/dashboard.js" defer></script>
+</head>
+<body class="app-page">
+  <header class="topbar">
+    <div class="brand-block">
+      <button id="secretMark" class="brand-mark" type="button" aria-label="Signal Garden mark"></button>
+      <div>
+        <p class="kicker">Signal Garden</p>
+        <h1>{{DISPLAY_NAME}}</h1>
+      </div>
+    </div>
+
+    <div class="user-strip">
+      <span>{{USERNAME}}</span>
+      <span>{{ROLE}}</span>
+      <form method="post" action="/logout">
+        <input type="hidden" name="_csrf" value="{{CSRF_TOKEN}}" />
+        <button class="ghost-btn" type="submit">Logout</button>
+      </form>
+    </div>
+  </header>
+
+  <main class="garden-layout">
+    <section class="sim-panel" aria-labelledby="gardenTitle">
+      <div class="section-head">
+        <div>
+          <p class="kicker">Live system</p>
+          <h2 id="gardenTitle">Canopy Control</h2>
+        </div>
+        <div class="level-chip">Level <span id="level">1</span></div>
+      </div>
+
+      <div class="canvas-wrap">
+        <canvas id="gardenCanvas" width="960" height="540" aria-label="Live Signal Garden simulation"></canvas>
+      </div>
+
+      <div class="action-row" aria-label="Garden actions">
+        <button class="action-btn" type="button" data-action="tune">Tune</button>
+        <button class="action-btn" type="button" data-action="harvest">Harvest</button>
+        <button class="action-btn" type="button" data-action="launch">Launch</button>
+        <button class="action-btn" type="button" data-action="stabilize">Stabilize</button>
+        <button id="eclipseButton" class="action-btn secret-btn is-hidden" type="button" data-action="eclipse">Eclipse Pulse</button>
+      </div>
+    </section>
+
+    <aside class="side-panel" aria-label="Garden telemetry">
+      <section class="stat-grid">
+        <article class="metric">
+          <span>Energy</span>
+          <strong id="energy">0</strong>
+        </article>
+        <article class="metric">
+          <span>Harmony</span>
+          <strong id="harmony">0</strong>
+        </article>
+        <article class="metric">
+          <span>Signal</span>
+          <strong id="signal">0</strong>
+        </article>
+        <article class="metric">
+          <span>Risk</span>
+          <strong id="risk">0</strong>
+        </article>
+      </section>
+
+      <section class="progress-panel">
+        <div class="progress-label">
+          <span>XP</span>
+          <strong><span id="xp">0</span>/<span id="nextXp">0</span></strong>
+        </div>
+        <div class="progress-track"><span id="xpBar"></span></div>
+      </section>
+
+      <section class="readings">
+        <div>
+          <span>Throughput</span>
+          <strong id="throughput">0</strong>
+        </div>
+        <div>
+          <span>Stability</span>
+          <strong id="stability">0</strong>
+        </div>
+        <div>
+          <span>Heat</span>
+          <strong id="heat">0</strong>
+        </div>
+      </section>
+
+      <section>
+        <div class="section-head compact">
+          <h2>Events</h2>
+          <span id="credits">0 credits</span>
+        </div>
+        <ol id="events" class="event-list"></ol>
+      </section>
+
+      <section>
+        <div class="section-head compact">
+          <h2>Discoveries</h2>
+        </div>
+        <div id="discoveries" class="discovery-list"></div>
+      </section>
+    </aside>
+  </main>
+</body>
+</html>

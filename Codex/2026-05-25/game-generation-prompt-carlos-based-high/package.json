@@ -1,0 +1,9 @@
+{
+  "name": "carlos-simulation-wars",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A polished JavaScript canvas game demo about Carlos, simulation collapse, and Rickr.",
+  "scripts": {
+    "start": "node server.js"
+  }
+}

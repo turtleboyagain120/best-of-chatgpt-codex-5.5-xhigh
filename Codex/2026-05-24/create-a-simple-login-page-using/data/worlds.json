@@ -1,0 +1,106 @@
+{
+  "worlds": {
+    "user_admin": {
+      "userId": "user_admin",
+      "level": 1,
+      "xp": 16,
+      "energy": 63,
+      "harmony": 70,
+      "credits": 120,
+      "risk": 13,
+      "signal": 53,
+      "mode": "standard",
+      "discoveries": [],
+      "eventLog": [
+        {
+          "at": "2026-05-24T18:52:26.147Z",
+          "text": "You tuned the canopy until the signal snapped into focus.",
+          "tone": "bright"
+        },
+        {
+          "at": "2026-05-24T18:52:17.403Z",
+          "text": "Admin User's Signal Garden came online.",
+          "tone": "calm"
+        }
+      ],
+      "lastUpdatedAt": "2026-05-24T18:52:26.147Z"
+    },
+    "user_30a1dc44-341e-4b15-af2d-49aa2ab9d5ec": {
+      "userId": "user_30a1dc44-341e-4b15-af2d-49aa2ab9d5ec",
+      "level": 1,
+      "xp": 0,
+      "energy": 72,
+      "harmony": 58,
+      "credits": 120,
+      "risk": 18,
+      "signal": 44,
+      "mode": "standard",
+      "discoveries": [],
+      "eventLog": [
+        {
+          "at": "2026-05-24T18:52:34.884Z",
+          "text": "Test Pilot's Signal Garden came online.",
+          "tone": "calm"
+        }
+      ],
+      "lastUpdatedAt": "2026-05-24T18:52:34.884Z"
+    },
+    "user_342d3dbf-6d7f-4713-8d9b-9b5201217dbc": {
+      "userId": "user_342d3dbf-6d7f-4713-8d9b-9b5201217dbc",
+      "level": 3,
+      "xp": 144,
+      "energy": 88,
+      "harmony": 87,
+      "credits": 126,
+      "risk": 78,
+      "signal": 100,
+      "mode": "standard",
+      "discoveries": [
+        "Outer Relay"
+      ],
+      "eventLog": [
+        {
+          "at": "2026-05-24T19:02:02.320Z",
+          "text": "A probe crossed the outer relay and returned with a new map shard.",
+          "tone": "bright"
+        },
+        {
+          "at": "2026-05-24T19:02:02.116Z",
+          "text": "A probe crossed the outer relay and returned with a new map shard.",
+          "tone": "bright"
+        },
+        {
+          "at": "2026-05-24T19:02:01.800Z",
+          "text": "A probe crossed the outer relay and returned with a new map shard.",
+          "tone": "bright"
+        },
+        {
+          "at": "2026-05-24T19:02:01.379Z",
+          "text": "A probe crossed the outer relay and returned with a new map shard.",
+          "tone": "bright"
+        },
+        {
+          "at": "2026-05-24T19:02:00.965Z",
+          "text": "A probe crossed the outer relay and returned with a new map shard.",
+          "tone": "bright"
+        },
+        {
+          "at": "2026-05-24T19:02:00.330Z",
+          "text": "The stabilizer cooled the garden's pulse.",
+          "tone": "calm"
+        },
+        {
+          "at": "2026-05-24T18:59:12.160Z",
+          "text": "A probe crossed the outer relay and returned with a new map shard.",
+          "tone": "bright"
+        },
+        {
+          "at": "2026-05-24T18:59:12.160Z",
+          "text": "The garden reached level 3.",
+          "tone": "bright"
+        }
+      ],
+      "lastUpdatedAt": "2026-05-24T19:02:02.320Z"
+    }
+  }
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign in | Signal Garden</title>
+  <link rel="stylesheet" href="/assets/styles.css" />
+  <script src="/assets/auth.js" defer></script>
+</head>
+<body class="auth-page">
+  <main class="auth-layout">
+    <section class="auth-intro" aria-labelledby="authTitle">
+      <p class="kicker">Private session</p>
+      <h1 id="authTitle">Signal Garden</h1>
+      <p class="lead">A protected workspace where each account grows its own live simulation.</p>
+      <div class="auth-proof" aria-label="Authentication protections">
+        <span>HttpOnly cookie</span>
+        <span>CSRF checked</span>
+        <span>Rate limited</span>
+      </div>
+    </section>
+
+    <section class="auth-panel" aria-label="Authentication">
+      <div class="auth-tabs" role="tablist" aria-label="Choose authentication mode">
+        <button class="tab is-active" type="button" role="tab" aria-selected="true" data-auth-tab="login">Sign in</button>
+        <button class="tab" type="button" role="tab" aria-selected="false" data-auth-tab="register">Create account</button>
+      </div>
+
+      <form id="loginForm" class="auth-form" data-auth-form="login" novalidate>
+        <div>
+          <label for="loginUsername">Username</label>
+          <input id="loginUsername" name="username" type="text" autocomplete="username" placeholder="admin" required />
+        </div>
+
+        <div>
+          <label for="loginPassword">Password</label>
+          <input id="loginPassword" name="password" type="password" autocomplete="current-password" placeholder="Your password" required />
+        </div>
+
+        <button class="primary-btn" type="submit">Sign in</button>
+      </form>
+
+      <form id="registerForm" class="auth-form is-hidden" data-auth-form="register" novalidate>
+        <div>
+          <label for="registerDisplayName">Display name</label>
+          <input id="registerDisplayName" name="displayName" type="text" autocomplete="name" placeholder="Avery Stone" required />
+        </div>
+
+        <div>
+          <label for="registerUsername">Username</label>
+          <input id="registerUsername" name="username" type="text" autocomplete="username" placeholder="avery_stone" required />
+        </div>
+
+        <div>
+          <label for="registerPassword">Password</label>
+          <input id="registerPassword" name="password" type="password" autocomplete="new-password" placeholder="8+ chars, letters and numbers" required />
+        </div>
+
+        <button class="primary-btn" type="submit">Create account</button>
+      </form>
+
+      <div id="message" class="message" aria-live="polite"></div>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carlos: Simulation Wars</title>
+    <link rel="stylesheet" href="./src/styles.css" />
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three@0.165.0/build/three.module.js"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <canvas id="game"></canvas>
+
+    <div id="boot-screen" class="boot-screen">
+      <div class="boot-copy">
+        <p class="eyebrow">Carlos: Simulation Wars</p>
+        <h1>Reality has lost the math.</h1>
+        <p>
+          The notepad split, Rickr woke beneath the earth, and Carlos has to
+          tear through three collapsing layers before the cosmic AI army turns
+          physics into a weapon.
+        </p>
+        <button id="start-button" type="button">Begin Simulation</button>
+      </div>
+    </div>
+
+    <div id="hud" class="hud hidden" aria-live="polite">
+      <section class="hud-panel status-panel">
+        <div class="status-row">
+          <span>Carlos</span>
+          <span id="run-time">00:00</span>
+        </div>
+        <div class="meter">
+          <span id="health-bar"></span>
+        </div>
+        <div class="meter energy">
+          <span id="energy-bar"></span>
+        </div>
+      </section>
+
+      <section class="hud-panel objective-panel">
+        <p id="zone-name">Stable Simulation Zone</p>
+        <strong id="objective-text">Stabilize simulation nodes</strong>
+        <span id="node-count">0/0 nodes</span>
+      </section>
+
+      <section class="hud-panel power-panel">
+        <span id="power-state">Defyn ring dormant</span>
+        <span id="shift-state">Reality phase stable</span>
+      </section>
+    </div>
+
+    <div id="reticle" class="reticle hidden" aria-hidden="true"></div>
+    <div id="interact-prompt" class="interact-prompt hidden"></div>
+    <div id="dialogue" class="dialogue hidden"></div>
+
+    <div id="end-screen" class="end-screen hidden">
+      <div class="end-copy">
+        <p class="eyebrow">Simulation Thread Closed</p>
+        <h2>Carlos stabilized the core.</h2>
+        <p id="end-summary">
+          Rickr dissolved into clean light. The army lost its grip on physics.
+          The notepad still smells terrible.
+        </p>
+        <button id="restart-button" type="button">Run Again</button>
+      </div>
+    </div>
+
+    <script id="carlos-debug" type="application/json">{}</script>
+    <img id="carlos-preview" alt="" hidden />
+
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>

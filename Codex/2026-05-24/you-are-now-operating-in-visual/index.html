@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Vanta Lyric is a cinematic AI future operating environment prototype."
+    />
+    <title>Vanta Lyric | Future Operating Environment</title>
+    <link rel="icon" href="data:," />
+    <link rel="preconnect" href="https://unpkg.com" />
+    <link rel="stylesheet" href="./styles.css" />
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://unpkg.com/three@0.164.1/build/three.module.js",
+          "three/addons/": "https://unpkg.com/three@0.164.1/examples/jsm/"
+        }
+      }
+    </script>
+    <script defer src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
+  </head>
+  <body>
+    <div id="boot" class="boot" aria-label="System boot sequence">
+      <div class="boot__sigil" aria-hidden="true">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <p>Field ignition complete</p>
+      <div class="boot__bar"><i></i></div>
+    </div>
+
+    <main class="shell" aria-label="Vanta Lyric command environment">
+      <canvas id="field" class="field-canvas" aria-label="Reactive 3D Lyric Field"></canvas>
+
+      <div class="atmosphere" aria-hidden="true">
+        <div class="scanline"></div>
+        <div class="grain"></div>
+      </div>
+
+      <header class="topbar">
+        <button class="brand" id="originButton" type="button" aria-label="Open Origin Room">
+          <span class="brand__mark" aria-hidden="true"></span>
+          <span>
+            <strong>Vanta Lyric</strong>
+            <em>Future OS / live build 0.10</em>
+          </span>
+        </button>
+
+        <section class="system-vitals" aria-label="System vitals">
+          <article>
+            <span>Forecast</span>
+            <strong id="forecastScore">87%</strong>
+          </article>
+          <article>
+            <span>Risk Heat</span>
+            <strong id="riskScore">31%</strong>
+          </article>
+          <article>
+            <span>Agent Sync</span>
+            <strong id="syncScore">94%</strong>
+          </article>
+        </section>
+
+        <div class="topbar__actions" aria-label="Global actions">
+          <button class="icon-button" id="briefingButton" type="button" aria-label="Generate cinematic briefing" title="Generate cinematic briefing">
+            <i data-lucide="clapperboard"></i>
+          </button>
+          <button class="icon-button" id="xrayButton" type="button" aria-pressed="false" aria-label="Toggle causal x-ray" title="Toggle causal x-ray">
+            <i data-lucide="scan-search"></i>
+          </button>
+          <button class="icon-button" id="silenceButton" type="button" aria-pressed="false" aria-label="Toggle silence mode" title="Toggle silence mode">
+            <i data-lucide="moon"></i>
+          </button>
+        </div>
+      </header>
+
+      <nav class="mode-rail" aria-label="Field modes">
+        <button class="mode-button is-active" type="button" data-mode="field" aria-label="Field Command" title="Field Command">
+          <i data-lucide="orbit"></i>
+          <span>Field</span>
+        </button>
+        <button class="mode-button" type="button" data-mode="loom" aria-label="Future Loom" title="Future Loom">
+          <i data-lucide="git-branch"></i>
+          <span>Loom</span>
+        </button>
+        <button class="mode-button" type="button" data-mode="theater" aria-label="Agent Theater" title="Agent Theater">
+          <i data-lucide="messages-square"></i>
+          <span>Theater</span>
+        </button>
+        <button class="mode-button" type="button" data-mode="weather" aria-label="Signal Weather" title="Signal Weather">
+          <i data-lucide="cloud-lightning"></i>
+          <span>Weather</span>
+        </button>
+        <button class="mode-button" type="button" data-mode="archive" aria-label="Memory Catacombs" title="Memory Catacombs">
+          <i data-lucide="archive"></i>
+          <span>Archive</span>
+        </button>
+      </nav>
+
+      <section class="left-panel glass-panel" aria-label="Simulation controls">
+        <div class="panel-heading">
+          <span>Live World</span>
+          <strong id="modeTitle">Field Command</strong>
+        </div>
+
+        <div class="scenario-card" id="scenarioCard">
+          <span class="scenario-card__status">active simulation</span>
+          <h1>Q3 Launch Reactor</h1>
+          <p id="scenarioCopy">
+            A living model of the launch, team energy, market weather, and hidden assumptions.
+          </p>
+        </div>
+
+        <label class="command-line" for="commandInput">
+          <i data-lucide="terminal"></i>
+          <input
+            id="commandInput"
+            type="text"
+            autocomplete="off"
+            spellcheck="false"
+            placeholder="Ask the field: reveal the dangerous assumption"
+          />
+        </label>
+
+        <div class="control-stack">
+          <label class="range-control" for="timeSlider">
+            <span>Future drift</span>
+            <output id="timeOutput">+6 weeks</output>
+            <input id="timeSlider" type="range" min="0" max="100" value="56" />
+          </label>
+
+          <label class="switch-control">
+            <input id="anomalySwitch" type="checkbox" checked />
+            <span aria-hidden="true"></span>
+            <strong>Anomaly Heat</strong>
+          </label>
+
+          <label class="switch-control">
+            <input id="ghostSwitch" type="checkbox" />
+            <span aria-hidden="true"></span>
+            <strong>Ghost Decisions</strong>
+          </label>
+        </div>
+      </section>
+
+      <aside class="right-panel glass-panel" aria-label="AI agent chorus">
+        <div class="panel-heading">
+          <span>The Chorus</span>
+          <strong>6 agents online</strong>
+        </div>
+        <div class="agent-list" id="agentList"></div>
+      </aside>
+
+      <section class="node-inspector glass-panel" aria-label="Selected signal inspector">
+        <div class="inspector-ring" aria-hidden="true"></div>
+        <div>
+          <span class="eyebrow">selected signal</span>
+          <h2 id="signalTitle">Enterprise Buyer Belief</h2>
+          <p id="signalBody">
+            The highest leverage assumption is still unverified. Causal x-ray recommends a synthetic buyer trial before launch lock.
+          </p>
+        </div>
+        <div class="confidence-grid">
+          <article>
+            <span>Confidence</span>
+            <strong id="confidenceValue">72</strong>
+          </article>
+          <article>
+            <span>Reversibility</span>
+            <strong id="reverseValue">41</strong>
+          </article>
+          <article>
+            <span>Emotion</span>
+            <strong id="emotionValue">High</strong>
+          </article>
+        </div>
+      </section>
+
+      <section class="bottom-console" aria-label="Future loom and briefing console">
+        <div class="timeline" id="timeline">
+          <button type="button" class="time-node is-active" data-branch="0">
+            <span></span>
+            <strong>Now</strong>
+            <em>Origin frame</em>
+          </button>
+          <button type="button" class="time-node" data-branch="1">
+            <span></span>
+            <strong>Fork A</strong>
+            <em>Ship faster</em>
+          </button>
+          <button type="button" class="time-node" data-branch="2">
+            <span></span>
+            <strong>Fork B</strong>
+            <em>Validate first</em>
+          </button>
+          <button type="button" class="time-node" data-branch="3">
+            <span></span>
+            <strong>Fork C</strong>
+            <em>Dark launch</em>
+          </button>
+        </div>
+
+        <div class="briefing-feed" id="briefingFeed">
+          <span>field whisper</span>
+          <p id="feedText">The market storm is moving clockwise. Skeptic found a confidence gap under enterprise onboarding.</p>
+        </div>
+      </section>
+
+      <section class="overlay-screen" id="overlayScreen" aria-live="polite" aria-hidden="true">
+        <div class="overlay-screen__frame">
+          <button class="icon-button overlay-close" id="overlayClose" type="button" aria-label="Close overlay" title="Close">
+            <i data-lucide="x"></i>
+          </button>
+          <span id="overlayEyebrow">cinematic briefing</span>
+          <h2 id="overlayTitle">The Future Is Arguing Back</h2>
+          <p id="overlayCopy">
+            Oracle, Skeptic, and Mirror are compressing nine future branches into a single launch recommendation.
+          </p>
+          <div class="briefing-meter">
+            <i id="briefingMeter"></i>
+          </div>
+          <div class="overlay-grid" id="overlayGrid"></div>
+        </div>
+      </section>
+
+      <div class="cursor-halo" id="cursorHalo" aria-hidden="true"></div>
+    </main>
+
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>

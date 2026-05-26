@@ -1,0 +1,9 @@
+{
+  "name": "signal-garden-auth-demo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Dependency-free Node.js auth demo with a protected Signal Garden simulation.",
+  "scripts": {
+    "start": "node server.js"
+  }
+}

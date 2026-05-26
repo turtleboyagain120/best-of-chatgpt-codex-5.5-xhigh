@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A 16+ cartoon villain platform game built with Phaser."
+    />
+    <title>Bad End Boulevard</title>
+  </head>
+  <body>
+    <main id="game-shell" aria-label="Bad End Boulevard game">
+      <div id="app"></div>
+    </main>
+    <nav id="touch-controls" aria-label="Touch controls">
+      <div class="touch-cluster">
+        <button type="button" class="touch-button" data-input="left" aria-label="Move left">&lt;</button>
+        <button type="button" class="touch-button" data-input="right" aria-label="Move right">&gt;</button>
+      </div>
+      <div class="touch-cluster">
+        <button type="button" class="touch-button" data-input="jump" aria-label="Jump">^</button>
+        <button type="button" class="touch-button" data-input="dash" aria-label="Dash">~</button>
+        <button type="button" class="touch-button" data-input="action" aria-label="Action">!</button>
+      </div>
+    </nav>
+    <link rel="stylesheet" href="src/styles.css" />
+    <script defer src="vendor/phaser.min.js"></script>
+    <script defer src="src/main.js"></script>
+  </body>
+</html>

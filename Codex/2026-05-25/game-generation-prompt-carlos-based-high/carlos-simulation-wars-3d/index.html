@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Carlos: Simulation Wars 3D</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="src/styles.css">
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three@0.165.0/build/three.module.js"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <canvas id="game"></canvas>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="edge-glow" aria-hidden="true"></div>
+
+    <section id="startScreen" class="start-screen">
+      <div class="start-copy">
+        <p class="eyebrow">Carlos: Simulation Wars 3D</p>
+        <h1>Enter Rickr's Core</h1>
+        <p class="story">
+          Carlos steps out of the notepad equation and into a collapsing 3D
+          simulation where physics nodes, AI sentries, and Rickr all fight back.
+        </p>
+        <button id="startButton" type="button">Start 3D Run</button>
+      </div>
+    </section>
+
+    <section id="hud" class="hud" hidden>
+      <div class="hud-top">
+        <div>
+          <p id="zoneName" class="zone-name">Stable Simulation Zone</p>
+          <p id="objective" class="objective">Rewrite the physics nodes.</p>
+        </div>
+        <div id="systemState" class="system-state">STABLE</div>
+      </div>
+
+      <div class="meters">
+        <div class="meter"><span>Integrity</span><i id="healthBar"></i></div>
+        <div class="meter"><span>Ring</span><i id="energyBar"></i></div>
+        <div class="meter"><span>Glitch</span><i id="glitchBar"></i></div>
+      </div>
+
+      <div id="prompt" class="prompt"></div>
+      <div id="toast" class="toast"></div>
+    </section>
+
+    <section id="ending" class="ending" hidden>
+      <div class="ending-copy">
+        <p class="eyebrow">Core report</p>
+        <h2>Rickr Destabilized</h2>
+        <p>The 3D layer folds, the ring burns gold, and Carlos keeps the equation.</p>
+        <button id="restartButton" type="button">Restart</button>
+      </div>
+    </section>
+
+    <script type="module" src="src/main.js"></script>
+  </body>
+</html>
